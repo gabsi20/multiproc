@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head lang="de">
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            h2{
+                color: #eee;
+                font-family: sans-serif;
+            }
+            body{
+                background-image: url(bg.jpg);
+                background-position: right top;
+                color: #eee;
+            }
+            main{
+                width: 850px;
+                margin: 0 auto;
+            }
+            .aufgabe{
+                border: 2px solid #00CD66;
+                width: 300px;
+                text-align: center;
+                padding: 25px;
+                background-color: rgba(120,120,120,0.6);
+            }
+            .contain{
+                float: left;
+                width: 350px;
+                margin: 20px;
+            }
+            .fix{
+                clear: both;   
+            }
+            .aufgabe input[type="text"]{
+                border: 2px solid #00CD66;
+                background-color: rgba(0,0,0,0.6);
+                color: #eee;
+            }
+            textarea{
+                width: 280px;
+                min-height: 280px;
+                border: 2px solid #00CD66;
+                background-color: rgba(0,0,0,0.6);
+                color: #eee;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="contain">
+                <h2>Aufgabe 1 & 2</h2>
+                <div id="bsp1" class="aufgabe">
+                    <form>
+                        <label for="zahl">Zu konvertierende Zahl</label><br>
+                        <input type="text" id="zahl" name="zahl1" value="1001"><br>
+                        <label for="oldbase">alte Basis der Zahl</label><br>
+                        <input type="text" id="oldbase" name="oldbase" value="2"><br>
+                        <label for="newbase">neue Basis der Zahl</label><br>
+                        <input type="text" id="newbase" name="newbase" value="10"><br>
+                        <input type="button" value="convert" onclick="main1()">
+                    </form>
+                    <p id="out"></p>
+                </div>
+            </div>
+
+
+            <div class="contain">
+                <h2>Aufgabe 3</h2>
+                <div id="bsp3" class="aufgabe">
+                    <form>
+                        <label for="inputcode">Eingabe</label><br>
+                        <input type="text" name="inputcode" id="inputcode" value="010000101101101100111010010001000110101">
+                        <input type="button" onclick="main3()" value="decode">
+                    </form>
+                    <p id="out3"></p>
+                </div>
+            </div>
+            <div class="fix"></div>
+            <div class="contain">
+                <h2>Aufgabe 4</h2>
+                <div id="bsp4" class="aufgabe">
+                    <form>
+                        <label for="textinput">Eingabe</label><br>
+                        <textarea  id="textinput"></textarea>
+                        <input type="button" onclick="main4()" value="relativate">
+                    </form>
+                    <p id="out4"></p>
+                </div>
+            </div>
+
+            <div class="contain">
+                <h2>Aufgabe 5</h2>
+                <div id="bsp5" class="aufgabe">
+                    <form>
+                        <label for="relatives">Eingabe</label><br>
+                        <textarea  id="relatives"></textarea>
+                        <input type="button" onclick="main5()" value="entropy">
+                    </form>
+                    <p id="out5"></p>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script>
+        /* nummer 1 & 2*/
+        function main1(){
+            var zahl = document.getElementById('zahl').value;
+            var oldbase = document.getElementById('oldbase').value;
+            var newbase = document.getElementById('newbase').value;
+            document.getElementById('out').innerHTML = baseCalc(zahl,oldbase,newbase);
+        }
+        function baseCalc(zahl2,oldbase,newbase){
+            var helper = parseInt(zahl2,oldbase);
+            return helper.toString(newbase);
+        }
+        
+        /* nummer 3 */
+        function main3(){
+            var input = document.getElementById('inputcode').value;
+            document.getElementById('out3').innerHTML = decode(input);
+        }
+        function decode(input){
+            var zeichen = new Array;
+            var key;
+            var check = "";
+            var final = "";
+            zeichen['01001'] = "A";
+            zeichen['10'] = "F";
+            zeichen['01000'] = "I";
+            zeichen['0111'] = "M";
+            zeichen['0101'] = "N";
+            zeichen['11'] = "O";
+            zeichen['0110'] = "R";
+            zeichen['00'] = "T"; 
+            for(var i = 0; i < input.length; i++){
+                check += input[i];
+                for(key in zeichen){
+                    if(check == key){
+                        final += zeichen[key];
+                        check = "";
+                    }
+                }
+            };
+            if(check != ""){
+                return "Failure in input-string!"; 
+                
+                
+            }
+            else{
+                return final;
+            }
+        }
+        
+        /* nummer 4 */
+        function main4(){
+            var input = document.getElementById('textinput').value;
+            document.getElementById('out4').innerHTML = countChars(input);
+        }
+        
+        function countChars(input){
+            var dictionary = {};
+            var returnstring = "";
+            for(var i = 0; i < input.length; i++){
+                if(input[i] in dictionary){
+                    dictionary[input[i]]++;   
+                }
+                else{
+                    dictionary[input[i]] = 1;   
+                }
+            }
+            for(var key in dictionary){
+                returnstring += key.charCodeAt(0)+";"+(dictionary[key]/input.length)+"<br>"; 
+            }
+            return returnstring;
+        }
+        
+        /* nummer 5 */
+        function main5(){
+            var number = 0;
+            var final = 0;
+            var lines = (document.getElementById('relatives').value).split("\n");
+            for(var i = 0; i < lines.length; i++){
+                number = lines[i].split(";")[1];
+                final += number*Math.log2(1/number);
+            }
+            document.getElementById('out5').innerHTML = final;
+        }
+       
+    </script>
+</html>
