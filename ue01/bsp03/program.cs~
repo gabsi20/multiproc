@@ -1,5 +1,8 @@
 using System;
+<<<<<<< HEAD
 using System.Drawing;
+=======
+>>>>>>> 691347f74c90daa24608723d8711d8c62c2c07cd
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
