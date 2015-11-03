@@ -1,0 +1,8 @@
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\bin\Release\PictureManipulation.exe.config
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\bin\Release\PictureManipulation.exe
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\bin\Release\PictureManipulation.pdb
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Release\PictureManipulation.Form1.resources
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Release\PictureManipulation.Properties.Resources.resources
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Release\PictureManipulation.csproj.GenerateResource.Cache
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Release\PictureManipulation.exe
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Release\PictureManipulation.pdb

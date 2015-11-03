@@ -1,0 +1,9 @@
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\bin\Debug\PictureManipulation.exe.config
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\bin\Debug\PictureManipulation.exe
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\bin\Debug\PictureManipulation.pdb
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Debug\PictureManipulation.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Debug\PictureManipulation.Form1.resources
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Debug\PictureManipulation.Properties.Resources.resources
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Debug\PictureManipulation.csproj.GenerateResource.Cache
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Debug\PictureManipulation.exe
+C:\Users\Alexander\Documents\Schule\2015WS\Multimedia Processing\PictureManipulation\PictureManipulation\obj\Debug\PictureManipulation.pdb
