@@ -34,7 +34,7 @@ namespace image
             {
                 for (int y = 0; y < img.Height; y++)
                 {
-                    greyval = (img.GetPixel(x, y).G + img.GetPixel(x, y).G + img.GetPixel(x, y).B) / 3;
+                    greyval = (int)(0.299*img.GetPixel(x, y).R + 0.587*img.GetPixel(x, y).G + 0.114*img.GetPixel(x, y).B);
                     c = Color.FromArgb(greyval,greyval,greyval);
                     img.SetPixel(x, y, c);
                 }
@@ -61,7 +61,7 @@ namespace image
             {
                 for (int y = 0; y < img.Height; y++)
                 {
-                    c = Color.FromArgb(img.GetPixel(x, y).R,img.GetPixel(x, y).G,0);
+                    c = Color.FromArgb(0,0,img.GetPixel(x,y).B);
                     img.SetPixel(x, y, c);
                 }
             }
